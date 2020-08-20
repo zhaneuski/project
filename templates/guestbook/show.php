@@ -40,13 +40,14 @@ echo Html::create('Table')
 //);
 //
 //echo $form->html();
+
 ?>
 <form action="?action=add&type=<?=$type?>" method="post" class="guestbookform">
     <label> <?= $comments['text'] ?>
-        <textarea name="text" cols="50" rows="10"></textarea>
+    <input type="tel" name="text">
     </label>
     <label> <?= $comments['phonenumber'] ?>
-        <input type="tel" name="phonenumber">
+        <textarea name="tel" cols="50" rows="10"></textarea>
     </label>
     <label> <?= $comments['email'] ?>
         <input type="email" name="email">
