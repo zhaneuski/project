@@ -21,23 +21,30 @@ echo Html::create('TableEdited')
     ->setClass('table')
     ->html();
 
+switch ($_SESSION['user']['cod']) {
+    case 'admin':
+        $form = Html::create('Form')
+            ->setMethod('POST')
+            ->setAction("?action=add&type=$type")
+            ->setClass('form');
 
-$form = Html::create('Form')
-    ->setMethod('POST')
-    ->setAction("?action=add&type=$type")
-    ->setClass('form');
+        foreach ($fields as $field) {
+            if ($field == "adress") {
+                $form->addContent(Html::create('Label')->setFor($field)->setInnerText($comments[$field])->html());
+                $form->addContent(Html::create('textarea')->setName($field)->setId($field)->html());
+            } else {
+                $form->addContent(Html::create('Label')->setFor($field)->setInnerText($comments[$field])->html());
+                $form->addContent(Html::create('input')->setName($field)->setId($field)->html());
+            }
+        }
 
+        $form->addContent(
+            Html::create('Input')
+                ->setType('submit')
+                ->setValue('OK')
+                ->html()
+        );
 
-foreach ($fields as $field) {
-    $form->addContent(Html::create('Label')->setFor($field)->setInnerText($comments[$field])->html());
-    $form->addContent(Html::create('input')->setName($field)->setId($field)->html());
+        echo $form->html();
+        break;
 }
-
-$form->addContent(
-    Html::create('Input')
-        ->setType('submit')
-        ->setValue('OK')
-        ->html()
-);
-
-echo $form->html();

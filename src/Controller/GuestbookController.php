@@ -12,15 +12,32 @@ class GuestbookController extends AbstractTableController
 
     public function actionShow(array $data)
     {
-        $this
-            ->view
-            ->setFolder('guestbook')
-            ->setTemplate('show')
-            ->setData([
-                'table' => $this->table->get(),
-                'fields' => array_diff($this->table->getColumnsNames(), ['id']),
-                'comments' => $this->table->getColumnsComments(),
-                'type' => $this->getClassName()
-            ]);
+
+        switch ($_SESSION['user']['cod']) {
+            case 'admin':
+                $this
+                    ->view
+                    ->setFolder('guestbook')
+                    ->setTemplate('showadmin')
+                    ->setData([
+                        'table' => $this->table->get(),
+                        'fields' => array_diff($this->table->getColumnsNames(), ['id']),
+                        'comments' => $this->table->getColumnsComments(),
+                        'type' => $this->getClassName()
+                    ]);
+                break;
+            case 'user':
+                $this
+                    ->view
+                    ->setFolder('guestbook')
+                    ->setTemplate('showuser')
+                    ->setData([
+                        'table' => $this->table->get(),
+                        'fields' => array_diff($this->table->getColumnsNames(), ['id']),
+                        'comments' => $this->table->getColumnsComments(),
+                        'type' => $this->getClassName()
+                    ]);
+                break;
+        }
     }
 }

@@ -47,7 +47,7 @@ echo Html::create('Table')
     <input type="tel" name="text">
     </label>
     <label> <?= $comments['phonenumber'] ?>
-        <textarea name="tel" cols="50" rows="10"></textarea>
+        <textarea name="phonenumber" cols="50" rows="10"></textarea>
     </label>
     <label> <?= $comments['email'] ?>
         <input type="email" name="email">
