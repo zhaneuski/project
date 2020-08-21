@@ -1,9 +1,11 @@
 {
     "admin": [],
-    "user": [
+    "chairman": [
         "group",
         "users"
     ],
+    "landlord": [],
+
     "default": [
         "group",
         "users",

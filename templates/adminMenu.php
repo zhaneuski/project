@@ -12,8 +12,8 @@
                 <li class="nav-item<?= $controllerType == 'Phonebook' ? ' active' : '' ?>">
                     <a class="nav-link" href="?action=show&type=Phonebook">Новости</a>
                 </li>
-                <li class="nav-item<?= $controllerType == 'guestbook' ? ' active' : '' ?>">
-                    <a class="nav-link" href="?action=show&type=guestbook">Заявки</a>
+                <li class="nav-item<?= $controllerType == 'application' ? ' active' : '' ?>">
+                    <a class="nav-link" href="?action=show&type=application">Заявки</a>
                 </li>
                 <li class="nav-item<?= $controllerType == 'group' ? ' active' : '' ?>">
                     <a class="nav-link" href="?action=show&type=group">Группа пользователей</a>
@@ -27,6 +27,10 @@
                 <li class="nav-item<?= $controllerType == 'auth' ? ' active' : '' ?>">
                     <a class="nav-link" href="?action=logout&type=auth">Выйти</a>
                 </li>
+                <li class="nav-item<?= $controllerType == 'landlordapplication' ? ' active' : '' ?>">
+                    <a class="nav-link" href="?action=show&type=landlordapplication">landlord controller</a>
+                </li>
+
                 <span class="navbar-text">
                     <?= !empty($_SESSION['user']) ? $_SESSION['user']['FIO'] . '(' . $_SESSION['user']['name'] . ')' : '' ?>
                 </span>

@@ -34,4 +34,16 @@ class UsersModel extends DbEntity
         }
         return $result;
     }
+
+    public function getUsers()
+    {
+        $data = $this->runSQL('SELECT `id`,`login` FROM `users`');
+        $result = [];
+        foreach ($data as $row) {
+            $result[$row['id']] = $row['login'];
+        }
+        return $result;
+    }
+
+
 }

@@ -28,8 +28,11 @@
         case 'admin':
             include "adminMenu.php";
             break;
-        case 'user':
-            include "userMenu.php";
+        case 'landlord':
+            include "landlordMenu.php";
+            break;
+        case 'chairman':
+            include "chairmanMenu.php";
             break;
         default:
             include "defaultMenu.php";
