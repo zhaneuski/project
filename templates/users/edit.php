@@ -6,6 +6,7 @@ use View\Html\Html;
  * @var string $type
  * @var array $fields
  * @var array $comments
+ * @var array $groupNames
  */
 
 $form = Html::create('Form')
@@ -32,7 +33,8 @@ foreach ($fields as $name => $value) {
         $form->addContent(Html::create('input')->setName($name)->setId($name)->setValue($value)->html());
     } else {
         $form->addContent('<br>');
-        $form->addContent((new \TexLab\Html\Select())->setName($name)->setId($name)->setSelectedValue($value)->setData($groupNames)->html());
+
+        $form->addContent((new \TexLab\Html\Select())->setName($name)->setId($name)->setSelectedValues([$value])->setData($groupNames)->html());
         $form->addContent('<br>');
     }
 }

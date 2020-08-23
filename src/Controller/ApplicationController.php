@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Controller;
-
 
 use Core\Config;
 use Model\ApplicationModel;
@@ -40,7 +38,6 @@ class ApplicationController extends AbstractTableController
         );
     }
 
-
     public function actionShow(array $data)
     {
         parent::actionShow($data);
@@ -61,8 +58,7 @@ class ApplicationController extends AbstractTableController
                     ->getApplicationPage($data['get']['page'] ?? 1)
             ]
         );
-
-
+        
 //        print_r($this->usersTable->getUsers());
         // switch ($_SESSION['user']['cod']) {
         //     case 'admin':
