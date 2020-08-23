@@ -60,7 +60,11 @@ echo Html::create('TableEdited')
     <label> <?= $comments['image'] ?>
         <input type="file" name="image">
     </label>
+
+
     <input type="hidden" name="users_id" value="<?= $user_id ?>">
+
+
     <!--    <label> --><? //= $comments['users_id'] ?>
     <!--    --><? //=(new Select())->setName('users_id')->setId('users_id')->setData($usersList)->html()?>
     <!--    </label>-->

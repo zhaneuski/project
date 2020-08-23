@@ -12,6 +12,6 @@
             <label for="exampleInputPassword1">Номер телефона</label>
             <input type="password" class="form-control" id="exampleInputPassword1" name="password">
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary">Отправить</button>
     </form>
 </div>
