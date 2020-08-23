@@ -22,9 +22,9 @@
             <li class="nav-item<?= $controllerType == 'users' ? ' active' : '' ?>">
                 <a class="nav-link" href="?action=show&type=users">Пользователи</a>
             </li>
-            <li class="nav-item<?= $controllerType == 'auth' ? ' active' : '' ?>">
-                <a class="nav-link" href="?action=loginform&type=auth">Авторизация</a>
-            </li>
+            <!--            <li class="nav-item--><? //= $controllerType == 'auth' ? ' active' : '' ?><!--">-->
+            <!--                <a class="nav-link" href="?action=loginform&type=auth">Авторизация</a>-->
+            <!--            </li>-->
             <li class="nav-item<?= $controllerType == 'auth' ? ' active' : '' ?>">
                 <a class="nav-link" href="?action=logout&type=auth">Выйти</a>
             </li>
@@ -35,6 +35,6 @@
 
             <span class="navbar-text">
                     <?= !empty($_SESSION['user']) ? $_SESSION['user']['FIO'] . '(' . $_SESSION['user']['name'] . ')' : '' ?>
-                </span>
+            </span>
     </div>
 </nav>
