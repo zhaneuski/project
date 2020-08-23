@@ -19,8 +19,8 @@ echo Html::create("Pagination")
     ->html();
 
 
-echo Html::create('TableEdited')
-    ->setControllerType($type)
+echo Html::create('Table')
+//    ->setControllerType($type)
     ->setHeaders($comments)
     ->data($table)
     ->setClass('table')
