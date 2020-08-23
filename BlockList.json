@@ -1,10 +1,10 @@
 {
     "admin": [],
-    "chairman": [
+    "chairman": [],
+    "landlord": [
         "group",
         "users"
     ],
-    "landlord": [],
 
     "default": [
         "group",

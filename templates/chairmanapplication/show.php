@@ -8,13 +8,16 @@ use View\Html\Html;
  * @var array $comments Комментарии к полям таблицы
  * @var string $type Имя контроллера
  * @var array $usersList список пользователей
- *@var array $table
+ * @var array $table
+ * @var int $user_id
  */
+
 echo Html::create("Pagination")
     ->setClass('pagination')
     ->setControllerType($type)
     ->setPageCount($pageCount)
     ->html();
+
 
 echo Html::create('TableEdited')
     ->setControllerType($type)
@@ -22,6 +25,7 @@ echo Html::create('TableEdited')
     ->data($table)
     ->setClass('table')
     ->html();
+
 
 //$form = Html::create('Form')
 //    ->setMethod('POST')
@@ -45,20 +49,4 @@ echo Html::create('TableEdited')
 
 
 //print_r($usersList);
-
 ?>
-<form action="?action=add&type=<?= $type ?>" method="post" class="guestbookform">
-    <label> <?= $comments['caption'] ?>
-        <input type="tel" name="caption">
-    </label>
-    <label> <?= $comments['content'] ?>
-        <textarea name="content" cols="50" rows="10"></textarea>
-    </label>
-    <label> <?= $comments['image'] ?>
-        <input type="file" name="image">
-    </label>
-    <label> <?= $comments['users_id'] ?>
-    <?=(new Select())->setName('users_id')->setId('users_id')->setData($usersList)->html()?>
-    </label>
-    <input type="submit" value="Отправить">
-</form>
