@@ -47,7 +47,10 @@ echo Html::create('TableEdited')
 //print_r($usersList);
 
 ?>
-<form action="?action=add&type=<?= $type ?>" method="post" class="guestbookform">
+<a class="btn btn-primary" id="addButton">Добавить</a>
+
+<form action="?action=add&type=<?= $type ?>" id="addForm" class="hidden" method="post" class="guestbookform">
+
     <label> <?= $comments['caption'] ?>
         <input type="tel" name="caption">
     </label>
@@ -61,4 +64,6 @@ echo Html::create('TableEdited')
     <?=(new Select())->setName('users_id')->setId('users_id')->setData($usersList)->html()?>
     </label>
     <input type="submit" value="Отправить">
+    <a class="btn btn-primary" id="closeFormButton">Закрыть</a>
 </form>
+<div id="shadow" class="hidden" ></div>
