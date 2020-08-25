@@ -43,19 +43,18 @@ echo Html::create('TableEdited')
 //
 //echo $form->html();
 
-
 //print_r($usersList);
 
 ?>
-<a class="btn btn-primary" id="addButton">Добавить</a>
+<a class="btn btn-primary" id="addButton">Добавить заявку</a>
 
 <form action="?action=add&type=<?= $type ?>" id="addForm" class="hidden" method="post" class="guestbookform">
 
     <label> <?= $comments['caption'] ?>
-        <input type="tel" name="caption">
+        <input type="tel" name="caption" id="caption">
     </label>
     <label> <?= $comments['content'] ?>
-        <textarea name="content" cols="50" rows="10"></textarea>
+        <textarea name="content" id="content" cols="50" rows="10"></textarea>
     </label>
     <label> <?= $comments['image'] ?>
         <input type="file" name="image">
