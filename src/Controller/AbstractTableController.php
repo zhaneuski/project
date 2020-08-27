@@ -80,20 +80,22 @@ abstract class AbstractTableController extends AbstractController implements CRU
 
     public function actionAdd(array $data)
     {
+//        print_r($_FILES);
+//        print_r($data['post']);
         // print_r($data);
         // try {
         $this->table->add($data['post']);
+
         // } catch (\Throwable $th) {
         //     $_SESSION['errors'][] = $th->getMessage();
         // } finally {
         $this->redirect('?action=show&type=' . $this->getClassName());
         // }
+
     }
 
     public function actionDel(array $data)
     {
-
-        // print_r($data);
         if (isset($data['get']['id'])) {
             $this->table->del(['id' => $data['get']['id']]);
         }
@@ -119,8 +121,6 @@ abstract class AbstractTableController extends AbstractController implements CRU
                 'comments' => $this->table->getColumnsComments()
             ]);
 
-
-        // print_r($viewData);
     }
 
     public function actionEdit(array $data)

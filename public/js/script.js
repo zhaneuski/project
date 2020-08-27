@@ -20,4 +20,3 @@ let smile = function() {
 }
 
 document.getElementById("content").addEventListener("keyup", smile )
-document.getElementById("caption").addEventListener("keyup", smile )

@@ -12,6 +12,11 @@ use View\Html\Html;
  * @var int $user_id
  */
 
+foreach ($table as &$row) {
+    $ext = pathinfo($row['image'], PATHINFO_EXTENSION);
+    $row['image'] = "<img src='images/application/$row[id].$ext' class='img'>";
+}
+
 echo Html::create("Pagination")
     ->setClass('pagination')
     ->setControllerType($type)
@@ -26,27 +31,3 @@ echo Html::create('Table')
     ->setClass('table')
     ->html();
 
-
-//$form = Html::create('Form')
-//    ->setMethod('POST')
-//    ->setAction("?action=add&type=$type")
-//    ->setClass('form');
-//
-//
-//foreach ($fields as $field) {
-//    $form->addContent(Html::create('Label')->setFor($field)->setInnerText($comments[$field])->html());
-//    $form->addContent(Html::create('input')->setName($field)->setId($field)->html());
-//}
-//
-//$form->addContent(
-//    Html::create('Input')
-//        ->setType('submit')
-//        ->setValue('OK')
-//        ->html()
-//);
-//
-//echo $form->html();
-
-
-//print_r($usersList);
-?>

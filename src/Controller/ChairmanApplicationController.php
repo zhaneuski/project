@@ -27,4 +27,6 @@ class ChairmanApplicationController extends ApplicationController
                 ]
             );
     }
+
+
 }
