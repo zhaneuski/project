@@ -17,17 +17,16 @@ foreach ($table as &$row) {
     $row['image'] = "<img src='images/application/$row[id].$ext' class='img'>";
 }
 
-echo Html::create("Pagination")
-    ->setClass('pagination')
-    ->setControllerType($type)
-    ->setPageCount($pageCount)
-    ->html();
-
-
 echo Html::create('Table')
 //    ->setControllerType($type)
     ->setHeaders($comments)
     ->data($table)
     ->setClass('table')
+    ->html();
+
+echo Html::create("Pagination")
+    ->setClass('pagination')
+    ->setControllerType($type)
+    ->setPageCount($pageCount)
     ->html();
 

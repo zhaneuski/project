@@ -12,8 +12,6 @@ use View\View;
 
 class AuthController extends AbstractController
 {
-
-
     private $table;
     private $tableName = 'users';
 
@@ -43,14 +41,12 @@ class AuthController extends AbstractController
 
     public function actionLogin($httpData)
     {
-
         $kod = $this
             ->table
             ->checkUser(
                 $httpData['post']['login'],
                 $httpData['post']['password']
             );
-
         if (empty($kod)) {
             $this->redirect("?action=loginform&type=" . $this->getClassName());
         } else {

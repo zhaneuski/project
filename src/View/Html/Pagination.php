@@ -1,8 +1,6 @@
 <?php
 
-
 namespace View\Html;
-
 
 class Pagination extends AbstractTag
 {
@@ -28,7 +26,6 @@ class Pagination extends AbstractTag
             $str .= "\t<a href='?action=show&type=$this->type&page=$i'>$i</a>\n";
         }
         $str .= "</div>\n";
-
         return $str;
     }
 }

@@ -12,8 +12,6 @@
 </head>
 
 <body>
-
-
 <?php
 $this->body();
 ?>

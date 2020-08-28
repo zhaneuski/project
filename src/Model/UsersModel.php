@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Model;
-
 
 use mysqli;
 use TexLab\MyDB\DbEntity;
@@ -44,6 +42,4 @@ class UsersModel extends DbEntity
         }
         return $result;
     }
-
-
 }

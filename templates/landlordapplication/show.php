@@ -23,38 +23,14 @@ echo Html::create("Pagination")
     ->setPageCount($pageCount)
     ->html();
 
-
 echo Html::create('TableEdited')
     ->setControllerType($type)
     ->setHeaders($comments)
     ->data($table)
     ->setClass('table')
     ->html();
-
-
-//$form = Html::create('Form')
-//    ->setMethod('POST')
-//    ->setAction("?action=add&type=$type")
-//    ->setClass('form');
-//
-//
-//foreach ($fields as $field) {
-//    $form->addContent(Html::create('Label')->setFor($field)->setInnerText($comments[$field])->html());
-//    $form->addContent(Html::create('input')->setName($field)->setId($field)->html());
-//}
-//
-//$form->addContent(
-//    Html::create('Input')
-//        ->setType('submit')
-//        ->setValue('OK')
-//        ->html()
-//);
-//
-//echo $form->html();
-
-
-//print_r($usersList);
 ?>
+
 <a class="btn btn-primary" id="addButton">Добавить заявку</a>
 <form action="?action=add&type=<?= $type ?>" method="post" enctype="multipart/form-data" id="addForm" class="hidden">
     <label> <?= $comments['caption'] ?>
@@ -66,14 +42,7 @@ echo Html::create('TableEdited')
     <label> <?= $comments['image'] ?>
         <input type="file" name="image">
     </label>
-
-
     <input type="hidden" name="users_id" value="<?= $user_id ?>">
-
-
-    <!--    <label> --><? //= $comments['users_id'] ?>
-    <!--    --><? //=(new Select())->setName('users_id')->setId('users_id')->setData($usersList)->html()?>
-    <!--    </label>-->
     <input type="submit" value="Отправить">
     <a class="btn btn-primary" id="closeFormButton">Закрыть</a>
 </form>

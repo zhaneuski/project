@@ -11,7 +11,8 @@ use View\Html\Html;
  *@var array $table
  */
 
-foreach ($table as &$row) {
+foreach ($table as &$row)
+{
     $ext = pathinfo($row['image'], PATHINFO_EXTENSION);
     $row['image'] = "<img src='images/application/$row[id].$ext' class='img'>";
 }
@@ -28,48 +29,10 @@ echo Html::create("Pagination")
     ->setControllerType($type)
     ->setPageCount($pageCount)
     ->html();
-
-
-//print_r($table);
-
-//$form = Html::create('Form')
-//    ->setMethod('POST')
-//    ->setAction("?action=add&type=$type")
-//    ->setClass('form');
-//
-//
-//
-////foreach ($fields as $field) {
-////    $form->addContent(Html::create('Label')->setFor($field)->setInnerText($comments[$field])->html());
-////    $form->addContent(Html::create('input')->setName($field)->setId($field)->html());
-////}
-//
-//foreach ($fields as $field) {
-//    if ($field == 'image') {
-//        $form->addContent(Html::create('Label')->setFor($field)->setInnerText($comments[$field])->html());
-//        $form->addContent(Html::create('input')->setName($field)->setId($field)->setType('file')->html());
-//    } else {
-//        $form->addContent(Html::create('Label')->setFor($field)->setInnerText($comments[$field])->html());
-//        $form->addContent(Html::create('input')->setName($field)->setId($field)->html());
-//    }
-//}
-//
-//$form->addContent(
-//    Html::create('Input')
-//        ->setType('submit')
-//        ->setValue('OK')
-//        ->html()
-//);
-//
-//echo $form->html();
-
-//print_r($usersList);
-
 ?>
+
 <a class="btn btn-primary" id="addButton">Добавить заявку</a>
-
 <form action="?action=add&type=<?= $type ?>" enctype="multipart/form-data" id="addForm" class="hidden" method="post" class="guestbookform">
-
     <label> <?= $comments['caption'] ?>
         <input type="tel" name="caption" id="caption">
     </label>

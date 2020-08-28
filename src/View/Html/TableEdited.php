@@ -24,9 +24,11 @@ class TableEdited extends Table
     {
         $str = "";
 
-        foreach ($data as $row) {
+        foreach ($data as $row)
+        {
             $str .= "\t<tr>\n";
-            foreach ($row as $key => $cell) {
+            foreach ($row as $key => $cell)
+            {
                 if ($key != "id") {
                     $str .= "\t\t<td>$cell</td>\n";
                 }

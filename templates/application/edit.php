@@ -13,9 +13,7 @@ use View\Html\Html;
 ?>
 
 <form action="?action=edit&type=<?= $type ?>" method="post" class="guestbookform" enctype="multipart/form-data" >
-
     <input type="hidden" name="id" value="<?= $id ?>">
-
     <label> <?= $comments['caption'] ?>
         <input type="tel" name="caption" value="<?= $fields['caption'] ?>">
     </label>

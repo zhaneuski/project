@@ -1,15 +1,12 @@
 <?php
 
-
 namespace Model;
-
 
 use mysqli;
 use TexLab\MyDB\DbEntity;
 
 class ApplicationModel extends DbEntity
 {
-
     public function getApplicationPage(int $page)
     {
         return $this
@@ -31,5 +28,4 @@ class ApplicationModel extends DbEntity
             ->setOrderBy('`application`.`id`')
             ->getPage($page);
     }
-
 }
