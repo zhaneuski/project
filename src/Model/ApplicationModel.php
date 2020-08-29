@@ -14,7 +14,7 @@ class ApplicationModel extends DbEntity
             ->setSelect('`application`.`id`, `application`.`caption`, `application`.`content`, `application`.`image`, `application`.`date`,  `users`.`login` AS users_id')
             ->setFrom('`users`,`application`')
             ->setWhere('`users`.`id` = `application`.`users_id`')
-            ->setOrderBy('`application`.`id`')
+            ->setOrderBy('`application`.`id` DESC')
             ->getPage($page);
     }
 
@@ -25,7 +25,7 @@ class ApplicationModel extends DbEntity
             ->setSelect('`application`.`id`, `application`.`caption`, `application`.`content`, `application`.`image`, `application`.`date`,  `users`.`login` AS users_id')
             ->setFrom('`users`,`application`')
             ->setWhere("`users`.`id` = `application`.`users_id` AND `application` . `users_id` = $user_id")
-            ->setOrderBy('`application`.`id`')
+            ->setOrderBy('`application`.`id` DESC')
             ->getPage($page);
     }
 }
