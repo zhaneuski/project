@@ -8,8 +8,8 @@
             <li class="nav-item<?= $controllerType == '' ? ' active' : '' ?>">
                 <a class="nav-link" href="/">На главную <span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item<?= $controllerType == 'Phonebook' ? ' active' : '' ?>">
-                <a class="nav-link" href="?action=show&type=Phonebook">Новости</a>
+            <li class="nav-item<?= $controllerType == 'News' ? ' active' : '' ?>">
+                <a class="nav-link" href="?action=show&type=news">Новости</a>
             </li>
             <li class="nav-item<?= $controllerType == 'application' ? ' active' : '' ?>">
                 <a class="nav-link" href="?action=show&type=application">Заявки</a>

@@ -7,8 +7,8 @@
                 <li class="nav-item<?= $controllerType == '' ? ' active' : '' ?>">
                     <a class="nav-link" href="/">На главную <span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item<?= $controllerType == 'Phonebook' ? ' active' : '' ?>">
-                    <a class="nav-link" href="?action=show&type=Phonebook">Новости</a>
+                <li class="nav-item<?= $controllerType == 'Landlordnews' ? ' active' : '' ?>">
+                    <a class="nav-link" href="?action=show&type=landlordnews">Новости</a>
                 </li>
                 <li class="nav-item<?= $controllerType == 'landlordapplication' ? ' active' : '' ?>">
                     <a class="nav-link" href="?action=show&type=landlordapplication">Заявки</a>
