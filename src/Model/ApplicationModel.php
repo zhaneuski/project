@@ -9,14 +9,15 @@ class ApplicationModel extends DbEntity
 {
     public function getApplicationPage(int $page)
     {
-        return $this
+        $this
             ->reset()
             ->setSelect('`application`.`id`, `application`.`caption`, `application`.`content`, `application`.`image`, `application`.`date`,  `users`.`login` AS users_id')
             ->setFrom('`users`,`application`')
             ->setWhere('`users`.`id` = `application`.`users_id`')
-            ->setOrderBy('`application`.`id` DESC')
+            ->setOrderBy('`application`.`id` DESC');
+//            ->getSQL();
 //            ->setLimit(2)
-            ->getPage($page);
+        return $this->getPage($page);
     }
 
     public function getApplicationPageUserFilter(int $page, int $user_id)

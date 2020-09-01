@@ -8,14 +8,20 @@ use View\Html\Html;
  * @var array $comments Комментарии к полям таблицы
  * @var string $type Имя контроллера
  * @var array $usersList список пользователей
- *@var array $table
+ * @var array $table
  */
 
-echo Html::create('TableEdited')
-    ->setControllerType($type)
+unset($comments["id"]);
+
+echo TexLab\Html\Html::table()
+    ->setData($table)
     ->setHeaders($comments)
-    ->data($table)
-    ->setClass('table')
+    ->setClass('table table-striped table-dark')
+    ->addCalculatedColumn(
+        fn($row) => "<a href='?action=del&type=$this->type&id=$row[id]'>❌</a>",
+        fn($row) => "<a href='?action=showedit&type=$this->type&id=$row[id]'>✏</a>"
+    )
+    ->removeColumns(["id"])
     ->html();
 
 echo Html::create("Pagination")
@@ -36,4 +42,4 @@ echo Html::create("Pagination")
     <input type="submit" value="Отправить">
     <a class="btn btn-primary" id="closeFormButton">Закрыть</a>
 </form>
-<div id="shadow" class="hidden" ></div>
+<div id="shadow" class="hidden"></div>
