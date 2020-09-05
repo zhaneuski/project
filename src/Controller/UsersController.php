@@ -9,7 +9,6 @@ use View\View;
 
 class UsersController extends AbstractTableController
 {
-
     protected $tableName = "users";
 
     public function __construct(View $view)

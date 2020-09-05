@@ -7,8 +7,6 @@ use View\Html\Html;
  * @var array $comments Комментарии к полям таблицы
  * @var string $type Имя контроллера
  */
-// print_r($groupNames);
-
 
 echo Html::create("Pagination")
     ->setClass('pagination')
@@ -22,7 +20,6 @@ echo Html::create('TableEdited')
     ->data($table)
     ->setClass('table')
     ->html();
-
 
 $form = Html::create('Form')
     ->setMethod('POST')

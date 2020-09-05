@@ -14,7 +14,6 @@ class Form extends AbstractTag
         return $this;
     }
 
-
     public function setContent(string $content)
     {
         $this->content = $content;
@@ -34,7 +33,6 @@ class Form extends AbstractTag
         }
         return $this;
     }
-
 
     public function html()
     {

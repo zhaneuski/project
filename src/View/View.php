@@ -55,7 +55,8 @@ class View
 
     public function body()
     {
-        if (is_array($this->data)) {
+        if (is_array($this->data))
+        {
             extract($this->data);
         }
         Html::create('input');

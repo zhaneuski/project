@@ -8,7 +8,6 @@ class Table extends AbstractTag
     protected $data;
     protected $headers;
 
-
     public function __construct()
     {
         $this->clear();
@@ -23,8 +22,8 @@ class Table extends AbstractTag
 
     public function setHeaders(array $headers) {
         $str = '';
-
-        foreach ($headers as $value) {
+        foreach ($headers as $value)
+        {
             $str .= "\t<th>$value</th>\n";
         }
         $this->headers = $str;
@@ -35,14 +34,15 @@ class Table extends AbstractTag
     {
         $str = "";
 
-        foreach ($data as $row) {
+        foreach ($data as $row)
+        {
             $str .= "\t<tr>\n";
-            foreach ($row as $cell) {
+            foreach ($row as $cell)
+            {
                 $str .= "\t\t<td>$cell</td>\n";
             }
             $str .= "\t</tr>\n";
         }
-
         $this->data = $str;
         return $this;
     }

@@ -12,10 +12,8 @@ use View\Html\Html;
 
 ?>
 
-<form action="?action=edit&type=<?= $type ?>" method="post" class="guestbookform">
-
+<form action="?action=edit&type=<?= $type ?>" method="post" class="guestbookform" enctype="multipart/form-data">
     <input type="hidden" name="id" value="<?= $id ?>">
-
     <label> <?= $comments['caption'] ?>
         <input type="tel" name="caption" value="<?= $fields['caption'] ?>">
     </label>
@@ -25,12 +23,5 @@ use View\Html\Html;
     <label> <?= $comments['image'] ?>
         <input type="file" name="image" >
     </label>
-
-<!--    <input type="hidden" name="users_id" value="--><?//= $user_id ?><!--">-->
-
-<!--    <label> --><?//= $comments['users_id'] ?>
-<!--        --><?//= (new Select())->setName('users_id')->setId('users_id')->setData($usersList)->setSelectedValues([(string) $fields['users_id']])->html() ?>
-<!--    </label>-->
-
     <input type="submit" value="Отправить">
 </form>

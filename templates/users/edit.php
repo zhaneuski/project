@@ -14,19 +14,6 @@ $form = Html::create('Form')
     ->setAction("?action=edit&type=$type")
     ->setClass('form');
 
-
-// foreach ($fields as $field) {
-//     $form->addContent(Html::create('Label')->setFor($field)->setInnerText($comments[$field])->html());
-
-//     if ($field != 'group_id') {
-//         $form->addContent(Html::create('input')->setName($field)->setId($field)->html());
-//     } else {
-//         $form->addContent('<br>');
-//         $form->addContent((new \TexLab\Html\Select())->setName($field)->setId($field)->setData($groupNames)->html());
-//         $form->addContent('<br>');
-//     }
-// }
-
 foreach ($fields as $name => $value) {
     $form->addContent(Html::create('Label')->setFor($name)->setInnerText($comments[$name])->html());
     if ($name != 'group_id') {
