@@ -18,8 +18,8 @@ echo TexLab\Html\Html::table()
     ->setHeaders($comments)
     ->setClass('table table-striped table-dark')
     ->addCalculatedColumn(
-        fn($row) => "<a href='?action=del&type=$this->type&id=$row[id]'>❌</a>",
-        fn($row) => "<a href='?action=showedit&type=$this->type&id=$row[id]'>✏</a>"
+        fn($row) => "<a href='?action=del&type=$type&id=$row[id]'>❌</a>",
+        fn($row) => "<a href='?action=showedit&type=$type&id=$row[id]'>✏</a>"
     )
     ->removeColumns(["id"])
     ->html();
