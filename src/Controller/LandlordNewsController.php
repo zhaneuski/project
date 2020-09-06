@@ -13,6 +13,8 @@ class LandlordNewsController extends AbstractTableController
 {
     protected $tableName = "news";
 
+}
+
 //    public function __construct(View $view)
 //    {
 //        parent::__construct($view);
@@ -27,4 +29,3 @@ class LandlordNewsController extends AbstractTableController
 //        );
 //        $this->view->setFolder('landlordnews');
 //    }
-}

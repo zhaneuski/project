@@ -5,16 +5,16 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item<?= $controllerType == '' ? ' active' : '' ?>">
-                    <a class="nav-link" href="/">На главную <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item<?= $controllerType == 'Landlordnews' ? ' active' : '' ?>">
-                    <a class="nav-link" href="?action=show&type=landlordnews">Новости</a>
+                    <a class="nav-link" href="?action=show&type=landlordnews">News</a>
                 </li>
                 <li class="nav-item<?= $controllerType == 'landlordapplication' ? ' active' : '' ?>">
-                    <a class="nav-link" href="?action=show&type=landlordapplication">Заявки</a>
+                    <a class="nav-link" href="?action=show&type=landlordapplication">Applications</a>
                 </li>
                 <li class="nav-item<?= $controllerType == 'auth' ? ' active' : '' ?>">
-                    <a class="nav-link" href="?action=logout&type=auth">Выйти</a>
+                    <a class="nav-link" href="?action=logout&type=auth">Logout</a>
                 </li>
                 <span class="navbar-text">
                     <?= !empty($_SESSION['user']) ? $_SESSION['user']['FIO'] . '(' . $_SESSION['user']['name'] . ')' : '' ?>

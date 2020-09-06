@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Peta&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&family=Montserrat:wght@200;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
+
+
 .table td {
     border: 2px solid black;
 }
@@ -6,7 +13,7 @@
     border-collapse: collapse;
 }
 
-.guestbookform label{
+.guestbookform label {
     display: block;
     margin: 20px;
 }
@@ -36,9 +43,425 @@
     top: 0;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(0,0,0,0.7);
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 .img {
     width: 150px;
+}
+
+
+/****  Верстка главной страницы   ****/
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 74rem;
+    margin: 0 auto;
+}
+
+/*header*/
+
+/*.header {*/
+/*    width: 100%;*/
+/*    position: absolute;*/
+/*    !*background-color: dimgray;*!*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    z-index: 1;*/
+/*}*/
+
+/*.header__inner {*/
+/*    display: flex;*/
+/*    justify-content: space-between;*/
+/*    align-items: center;*/
+/*    padding: 1rem 0;*/
+/*}*/
+
+/*.header_logo {*/
+/*    font-size: 2rem;*/
+/*    margin-left: 3rem;*/
+/*    color: aliceblue;*/
+/*    font-family: 'Roboto Condensed';*/
+/*}*/
+
+/*intro*/
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 9rem;
+    width: 100%;
+    min-width: 200px;
+    background-image: url(../images/index/intro.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: white;
+}
+
+.intro .container {
+    display: flex;
+    justify-content: center;
+}
+
+.intro__inner {
+    width: 100%;
+    text-align: left;
+    margin: 5rem 0 10rem 3rem;
+}
+
+.intro__inner h1 {
+    width: 55%;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+    line-height: 4rem;
+    /* text-shadow: -0   -1px 0   #000000,
+         0   -1px 0   #000000,
+        -0    1px 0   #000000,
+         0    1px 0   #000000,
+        -1px -0   0   #000000,
+         1px -0   0   #000000,
+        -1px  0   0   #000000,
+         1px  0   0   #000000,
+        -1px -1px 0   #000000,
+         1px -1px 0   #000000,
+        -1px  1px 0   #000000,
+         1px  1px 0   #000000,
+        -1px -1px 0   #000000,
+         1px -1px 0   #000000,
+        -1px  1px 0   #000000,
+         1px  1px 0   #000000; */
+}
+
+/* .form {
+    width: 15rem;
+}
+
+.link_form {
+    text-decoration: none;
+    position: relative;
+    color: white;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    padding: 1rem;
+    font-family: 'Lexend Peta', sans-serif;
+}
+
+.form .link_form::before {
+    content: '';
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    background-color: white;
+    transition: 0.2s;
+  }
+
+  .form .link_form:hover:before {
+    width: 100%;
+    left: 0;
+  } */
+
+/*Кнопка войти*/
+
+.svg-wrapper {
+    position: relative;
+    top: 20%;
+    transform: translateY(-50%);
+    width: 200px;
+    height: 60px;
+    text-align: center;
+    /* background-color: rgba(2, 2, 2, 0.3); */
+}
+
+.shape {
+    stroke-dasharray: 140 540;
+    stroke-dashoffset: 300;
+    stroke-width: 3px;
+    fill: transparent;
+    stroke: white;
+    border-bottom: 5px solid black;
+    transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s;
+}
+
+.text {
+    font-family: 'Crimson Text';
+    font-weight: 100;
+    font-size: 22px;
+    line-height: 32px;
+    letter-spacing: 8px;
+    color: #fff;
+    top: -48px;
+    position: relative;
+}
+
+.svg-wrapper:hover .shape {
+    stroke-width: 2px;
+    stroke-dashoffset: 0;
+    stroke-dasharray: 760;
+}
+
+.link_form {
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+}
+
+.link_form:hover {
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+}
+
+/*ABOUT US*/
+
+.about {
+    background-color: rgb(26, 26, 26);
+    padding: 12rem 0;
+}
+
+.header2 {
+    display: inline-block;
+    color: white;
+    padding: 0 2rem 0.5rem 0;
+    margin-left: 3rem;
+    font-size: 2.5rem;
+    font-weight: normal;
+    border-bottom: 3px solid white;
+}
+
+.about__inner {
+    text-align: justify;
+    margin-left: 3rem;
+    margin-top: 2rem;
+    color: white;
+    width: 50%;
+    font-size: 1.5rem;
+    line-height: 2.3rem;
+    font-weight: normal;
+    font-family: 'Noto Serif';
+}
+
+/* news*/
+
+.news {
+    background-color: rgb(223, 219, 213);
+    padding: 12rem 0;
+}
+
+#news_container {
+    display: flex;
+    flex-direction: column;
+}
+
+.container_header {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 3rem;
+}
+
+.header3 {
+    display: inline-block;
+    color: black;
+    padding: 0 0 0.5rem 2rem;
+    font-size: 2.5rem;
+    font-weight: normal;
+    border-bottom: 3px solid black;
+    margin-right: 3rem;
+    text-align: right;
+}
+
+.news_content {
+    display: grid;
+    grid-gap: 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    margin: 0 3rem;
+}
+
+.news_caption {
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.news_text {
+    text-align: justify;
+}
+
+.container_date {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.date {
+    color: dimgray;
+    font-weight: bold;
+    font-size: 0.7rem;
+    margin-top: 1rem;
+}
+
+/*footer*/
+
+.footer {
+    background-color: rgb(22, 22, 22);
+    padding: 5rem 0;
+}
+
+.footer__inner {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    justify-items: center;
+    grid-gap: 1rem;
+}
+
+.footer_content {
+    height: 7rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    padding: 1rem 0;
+}
+
+.footer_logo {
+    font-size: 2.5rem;
+    font-family: 'Roboto Condensed';
+}
+
+.footer_logo a {
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+
+.footer_img {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.footer_header {
+    text-transform: uppercase;
+    margin-bottom: 0.6rem;
+    font-size: 1rem;
+}
+
+.footer_item {
+    font-size: 0.8rem;
+}
+
+/**auth**/
+
+.auth {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../images/auth/auth.png);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Noto Serif'
+}
+
+.container_auth {
+    box-sizing: border-box;
+    width: 18rem;
+    height: 22rem;
+    border: 1px solid white;
+    border-radius: 10px;
+    background-color: rgba(0,0,0,0.6);
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.login_header {
+    margin: 1rem auto;
+    color: white;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-group label {
+    margin: 1rem 0;
+    color: white;
+}
+
+.login_auth {
+    height: 2rem;
+    border-radius: 5px;
+    border: 1px solid #313131;
+    font-size: 1rem;
+    padding-left: .5rem;
+    width: 10rem;
+    background: rgba(255,255,255,.7);
+}
+
+.btn_auth {
+    margin: 1.5rem 0;
+    width: 7rem;
+    height: 2.3rem;
+    font-size: 1rem;
+    border: 1px solid white;
+    border-radius: 5px;
+    background: none;
+    color: white;
+    text-transform: uppercase;
+}
+
+.btn_auth:hover {
+    color: black;
+    border: 1px solid black;
+    background: rgba(255,255,255,.7);
+    cursor: pointer;
+}
+
+
+/*media*/
+
+@media screen and (max-width: 600px) {
+    .intro__inner {
+        margin: 5rem 3rem 10rem 3rem;
+    }
+
+    .intro__inner h1 {
+        width: 100%;
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    .svg-wrapper {
+        margin: 0 auto;
+    }
+
+    .about__inner {
+        text-align: justify;
+        color: white;
+        margin: 2rem 3rem 0 3rem;
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .about__inner {
+        font-size: 1.2rem;
+    }
 }
