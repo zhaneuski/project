@@ -26,12 +26,12 @@
         <form class="form_auth" action="<?= $action ?>" method="POST">
             <div class="form-group">
                 <label for="login_auth">Apartment number</label>
-                <input type="text" name="login" placeholder="enter your apartment" class="login_auth"
+                <input type="text" name="login" class="login_auth"
                        id="login_auth">
             </div>
             <div class="form-group">
                 <label for="password_auth">Phone number</label>
-                <input placeholder="enter your phone" type="text" name="password" class="login_auth"
+                <input type="text" name="password" class="login_auth"
                        id="password_auth">
             </div>
 
