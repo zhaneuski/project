@@ -1,4 +1,9 @@
+<?php
 
+use TexLab\Html\Select;
+use View\Html\Html;
+/** @var array $table */
+?>
 <!-- Intro -->
 
 <div class="intro">
@@ -8,12 +13,6 @@
             <h1>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit
             </h1>
-            <!-- effects -->
-
-            <!-- <div class="form">
-                <a href="" class="link_form">Войти</a>
-              </div> -->
-
             <div class="svg-wrapper">
                 <svg height="60" width="200" xmlns="http://www.w3.org/2000/svg">
                     <rect class="shape" height="60" width="200"/>
@@ -52,54 +51,12 @@
             <h2 class="header3"> Actual news</h2>
         </div>
 
-        <div class="news_content">
+        <?php
+        echo Html::create('DefaultDiv')
+            ->data($table)
+            ->html();
+        ?>
 
-            <div class="news_item">
-
-                <h3 class="news_caption">caption</h3>
-                <div class="news_text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum iusto omnis libero voluptate
-                    recusandae natus temporibus quisquam, deserunt consectetur. Repellat tenetur dolores eaque,
-                    voluptatibus amet nam. Omnis ipsum voluptate minima.
-                </div>
-                <div class="container_date">
-                    <div class="date">10-12-1989</div>
-                </div>
-            </div>
-            <div class="news_item">
-                <h3 class="news_caption">caption</h3>
-                <div class="news_text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum iusto omnis libero voluptate
-                    recusandae natus temporibus quisquam, deserunt consectetur. Repellat tenetur dolores eaque,
-                    voluptatibus amet nam. Omnis ipsum voluptate minima.
-                </div>
-                <div class="container_date">
-                    <div class="date">10-12-1989</div>
-                </div>
-            </div>
-            <div class="news_item">
-                <h3 class="news_caption">caption</h3>
-                <div class="news_text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum iusto omnis libero voluptate
-                    recusandae natus temporibus quisquam, deserunt consectetur. Repellat tenetur dolores eaque,
-                    voluptatibus amet nam. Omnis ipsum voluptate minima.
-                </div>
-                <div class="container_date">
-                    <div class="date">10-12-1989</div>
-                </div>
-            </div>
-            <div class="news_item">
-                <h3 class="news_caption">caption</h3>
-                <div class="news_text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum iusto omnis libero voluptate
-                    recusandae natus temporibus quisquam, deserunt consectetur. Repellat tenetur dolores eaque,
-                    voluptatibus amet nam. Omnis ipsum voluptate minima.
-                </div>
-                <div class="container_date">
-                    <div class="date">10-12-1989</div>
-                </div>
-            </div>
-        </div>
     </div>
 </div>
 
