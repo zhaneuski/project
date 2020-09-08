@@ -67,7 +67,7 @@ use View\Html\Html;
     <div class="container">
         <div class="footer__inner">
             <div class="footer_content">
-                <div class="footer_logo"><a href="index.html">Z.V</a></div>
+                <div class="footer_logo"><a href="?action=show&type=default">Z.V</a></div>
             </div>
 
             <div class="footer_content">
