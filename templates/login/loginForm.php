@@ -36,7 +36,7 @@
             </div>
 
             <div class="form-group">
-                <button type="submit" class="btn_auth">send</button>
+                <button type="submit" class="btn_auth">Login</button>
             </div>
 
         </form>

@@ -43,6 +43,7 @@ class DefaultController extends AbstractTableController
                 'table' => $this
                     ->table
                     ->reset()
+                    ->setPageSize(Config::PAGE_DEFAULT_SIZE)
                     ->getDefaultPage($data['get']['page'] ?? 1)
             ]
         );
