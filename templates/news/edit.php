@@ -11,14 +11,16 @@ use View\Html\Html;
  */
 
 ?>
+<!--<div class="add_newsform_container">-->
+    <form action="?action=edit&type=<?= $type ?>" method="post" class="guestbookform" >
+        <input type="hidden" name="id" value="<?= $id ?>">
+        <label> <?= $comments['header'] ?>
+            <input type="tel" name="header" value="<?= $fields['header'] ?>">
+        </label>
+        <label> <?= $comments['newscontent'] ?>
+            <textarea name="newscontent" cols="50" rows="10"><?=$fields['newscontent'] ?></textarea>
+        </label>
+        <input type="submit" value="send">
+    </form>
+<!--</div>-->
 
-<form action="?action=edit&type=<?= $type ?>" method="post" class="guestbookform" >
-    <input type="hidden" name="id" value="<?= $id ?>">
-    <label> <?= $comments['header'] ?>
-        <input type="tel" name="header" value="<?= $fields['header'] ?>">
-    </label>
-    <label> <?= $comments['newscontent'] ?>
-        <textarea name="newscontent" cols="50" rows="10"><?=$fields['newscontent'] ?></textarea>
-    </label>
-    <input type="submit" value="Отправить">
-</form>

@@ -17,7 +17,7 @@
                             <a class="header__link" href="?action=show&type=landlordnews">News</a>
                         </li>
                         <li>
-                            <a class="header__link" href="?action=show&type=application">Applications</a>
+                            <a class="header__link" href="?action=show&type=landlordapplication">Applications</a>
                         </li>
                         <li>
                             <a class="header__link" href="?action=logout&type=auth">Logout</a>

@@ -50,16 +50,23 @@ use View\Html\Html;
 
 <!-- Add news form -->
 
-<form action="?action=add&type=<?= $type ?>" id="addForm" class="hidden" method="post" class="add_news_form">
-    <label> <?= $comments['header'] ?>
-        <input type="tel" name="header" id="header">
-    </label>
-    <label> <?= $comments['newscontent'] ?>
-        <textarea name="newscontent" id="newscontent" cols="50" rows="10"></textarea>
-    </label>
-    <input type="submit" value="Отправить">
-    <a class="btn btn-primary" id="closeFormButton">Закрыть</a>
-</form>
+
+    <form action="?action=add&type=<?= $type ?>" id="addForm" class="hidden" method="post" class="add_news_form">
+        <div class="addnews_modal">
+
+            <label for="header" class="news_form_lable"> <?= $comments['header'] ?></label>
+            <input type="tel" name="header" id="header">
+
+            <label for="newscontent" class="news_form_lable"> <?= $comments['newscontent'] ?></label>
+            <textarea name="newscontent" id="newscontent" cols="30" rows="5"></textarea>
+            <input class="sendFormButton" type="submit" value="Send">
+
+            <a id="closeFormButton">Close</a>
+
+        </div>
+    </form>
+
+
 <div id="shadow" class="hidden"></div>
 
 <!-- footer -->

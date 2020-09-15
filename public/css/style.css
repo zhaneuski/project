@@ -5,13 +5,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
 
 
-.table td {
-    border: 2px solid black;
-}
-
-.table {
-    border-collapse: collapse;
-}
 
 .guestbookform label {
     display: block;
@@ -22,18 +15,51 @@
     display: none;
 }
 
-#addForm label {
+/*#addForm label {*/
+/*    display: block;*/
+/*}*/
+
+.news_form_lable {
     display: block;
+    /*text-align: center;*/
+    margin-top: 1.5rem;
+}
+
+#header, #newscontent {
+    width: 23rem;
+    /*margin: 0 auto;*/
+    background-color: #959595;
+    border: none;
+}
+
+#closeFormButton {
+    display: inline-block;
+    width: 15rem;
+    margin-top: 1.5rem;
+}
+
+.sendFormButton {
+    margin-top: 1.5rem;
+}
+
+.addnews_modal {
+    display: flex;
+    flex-direction: column;
 }
 
 #addForm {
+    width: 25rem;
+    border-radius: 10px;
+    padding: 1rem;
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: 55%;
     transform: translate(-50%, -50%);
-    border: 1px solid red;
-    background-color: cadetblue;
+    /*border: 1px solid red;*/
+    background-color: rgba(0, 0, 0, 0.3);
     z-index: 2;
+    color: white;
+    font-family: 'Noto Serif';
 }
 
 #shadow {

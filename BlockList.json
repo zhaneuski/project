@@ -1,9 +1,13 @@
 {
     "admin": [],
-    "chairman": [],
+    "chairman": [
+        "landlordapplication"
+    ],
     "landlord": [
         "group",
-        "users"
+        "users",
+        "application",
+        "news"
     ],
 
     "default": [
