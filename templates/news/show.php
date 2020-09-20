@@ -58,60 +58,13 @@ use View\Html\Html;
             <input type="tel" name="header" id="header">
 
             <label for="newscontent" class="news_form_lable"> <?= $comments['newscontent'] ?></label>
-            <textarea name="newscontent" id="newscontent" cols="30" rows="5"></textarea>
-            <input class="sendFormButton" type="submit" value="Send">
+            <textarea name="newscontent" id="newscontent" cols="30" rows="4"></textarea>
+            <input class="sendFormButton" type="submit" value="Add news">
 
             <a id="closeFormButton">Close</a>
 
         </div>
     </form>
 
-
 <div id="shadow" class="hidden"></div>
 
-<!-- footer -->
-
-<footer class="footer">
-    <div class="container">
-        <div class="footer__inner">
-            <div class="footer_content">
-                <div class="footer_logo"><a href="?action=show&type=default">Z.V</a></div>
-            </div>
-
-            <div class="footer_content">
-                <div class="footer_img">
-                    <i class="fa fa-envelope" aria-hidden="true"></i>
-                </div>
-
-                <h4 class="footer_header">mail</h4>
-
-                <div class="footer_item">
-                    klibariy@mail.ru
-                </div>
-            </div>
-
-            <div class="footer_content">
-
-                <div class="footer_img">
-                    <i class="fa fa-phone" aria-hidden="true"></i>
-                </div>
-                <h4 class="footer_header">call</h4>
-                <div class="footer_item">
-                    +123456789
-                </div>
-            </div>
-
-            <div class="footer_content">
-                <div class="footer_img">
-                    <i class="fa fa-bus" aria-hidden="true"></i>
-                </div>
-                <h4 class="footer_header">find us</h4>
-                <div class="footer_item">
-                    Vitebsk, Republic of Belarus
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
-
-<script src="https://use.fontawesome.com/191ec19d10.js"></script>

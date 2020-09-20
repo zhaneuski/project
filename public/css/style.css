@@ -4,7 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Text&family=Montserrat:wght@200;300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
 
-
+/* modal window */
 
 .guestbookform label {
     display: block;
@@ -25,30 +25,43 @@
     margin-top: 1.5rem;
 }
 
-#header, #newscontent {
-    width: 23rem;
+#header, #newscontent, #app_caption, #app_content {
+    width: 80%;
     /*margin: 0 auto;*/
-    background-color: #959595;
+    /*background-color: #959595;*/
     border: none;
+    background-color: rgba(255, 255, 255, 0.4);
 }
 
 #closeFormButton {
     display: inline-block;
-    width: 15rem;
+    width: 80%;
     margin-top: 1.5rem;
 }
 
 .sendFormButton {
     margin-top: 1.5rem;
+    width: 80%;
+    background-color: rgba(255, 255, 255, 0);
+    text-transform: uppercase;
+    border: 1px solid white;
+    color: white;
 }
 
+/*.sendFormButton:hover {*/
+/*    background-color: rgba(255, 255, 255, 0);*/
+/*}*/
+
 .addnews_modal {
+    text-transform: uppercase;
+    max-width: 18rem;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 #addForm {
-    width: 25rem;
+    width: 20rem;
     border-radius: 10px;
     padding: 1rem;
     position: absolute;
@@ -72,8 +85,80 @@
     background-color: rgba(0, 0, 0, 0.7);
 }
 
+
+.file {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+#label_file, #edit_file {
+    border: 1px solid white;
+    padding: 0.2rem 1rem;
+    width: 80%;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+
+#users_id {
+    width: 80%;
+    text-transform: uppercase;
+
+}
+
+/* Edit */
+
+.edit_newsform_container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.edit_newsform {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+    width: 20rem;
+    height: 25rem;
+    border-radius: 10px;
+    margin: 0 1rem;
+    padding: 1rem 0;
+}
+
+.header_form_edit, .edit_form_btn {
+    margin-top: 1rem;
+    text-transform: uppercase;
+}
+
+#edit_form_content,
+#edit_form_header,
+#edit_form_caption,
+#edit_app_content,
+#edit_users_id {
+    width: 90%;
+}
+
+#edit_file {
+    border: 1px solid #767676;
+    width: 90%;
+}
+
+.edit_appform {
+    height: 27rem;
+}
+
+/* */
+
 .img {
-    width: 150px;
+    width: 100%;
 }
 
 
@@ -328,6 +413,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .news_text {
+    margin-top: 1rem;
     text-align: justify;
 }
 
@@ -347,7 +433,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 .footer {
     background-color: rgb(22, 22, 22);
-    padding: 5rem 0;
+    padding: 5rem 0 10rem 0;
 }
 
 .footer__inner {
@@ -736,6 +822,8 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 @media screen and (max-width: 450px) {
+
+
     .about__inner {
         font-size: 1.2rem;
     }

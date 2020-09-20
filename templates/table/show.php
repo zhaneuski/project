@@ -8,11 +8,7 @@ use View\Html\Html;
  * @var string $type Имя контроллера
  */
 
-echo Html::create("Pagination")
-    ->setClass('pagination')
-    ->setControllerType($type)
-    ->setPageCount($pageCount)
-    ->html();
+
 
 echo Html::create('TableEdited')
     ->setControllerType($type)
@@ -20,7 +16,19 @@ echo Html::create('TableEdited')
     ->data($table)
     ->setClass('table')
     ->html();
+?>
 
+    <div class="pagination_container">
+        <?php
+        echo Html::create("Pagination")
+            ->setClass('pagination')
+            ->setControllerType($type)
+            ->setPageCount($pageCount)
+            ->html();
+        ?>
+    </div>
+
+<?php
 switch ($_SESSION['user']['cod']) {
     case 'admin':
         $form = Html::create('Form')
@@ -48,3 +56,4 @@ switch ($_SESSION['user']['cod']) {
         echo $form->html();
         break;
 }
+

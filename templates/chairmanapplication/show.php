@@ -17,16 +17,39 @@ foreach ($table as &$row) {
     $row['image'] = "<img src='images/application/$row[id].$ext' class='img'>";
 }
 
-echo Html::create('Table')
-//    ->setControllerType($type)
-    ->setHeaders($comments)
-    ->data($table)
-    ->setClass('table')
-    ->html();
+unset($comments["id"]);
 
-echo Html::create("Pagination")
-    ->setClass('pagination')
-    ->setControllerType($type)
-    ->setPageCount($pageCount)
-    ->html();
+?>
+
+<div class="news">
+    <div class="container" id="news_container">
+
+        <div class="container_header">
+
+            <div class="header_button">
+                <h2 class="header3"> Actual Applications</h2>
+            </div>
+
+        </div>
+
+        <?php
+        echo Html::create('ChairmanAppDiv')
+            ->setControllerType($type)
+            ->data($table)
+            ->html();
+        ?>
+
+        <div class="pagination_container">
+            <?php
+            echo Html::create("Pagination")
+                ->setClass('pagination')
+                ->setControllerType($type)
+                ->setPageCount($pageCount)
+                ->html();
+            ?>
+        </div>
+    </div>
+</div>
+
+
 
