@@ -9,6 +9,7 @@ use View\Html\Html;
  * @var string $type Имя контроллера
  * @var array $usersList список пользователей
  * @var array $table
+ * @var int $currentPage
  */
 
 ?>
@@ -38,11 +39,18 @@ use View\Html\Html;
 
         <div class="pagination_container">
             <?php
-            echo Html::create("Pagination")
-                ->setClass('pagination')
-                ->setControllerType($type)
-                ->setPageCount($pageCount)
-                ->html();
+            if ($pageCount > 1) {
+                $pagination = TexLab\Html\Html::pagination();
+
+                echo $pagination
+                    ->setClass("pagination")
+                    ->setUrlPrefix("?type=$type&action=show")
+                    ->setPrevious('Previous')
+                    ->setNext('Next')
+                    ->setPageCount($pageCount)
+                    ->setCurrentPage($currentPage)
+                    ->html();
+            }
             ?>
         </div>
     </div>
@@ -51,20 +59,20 @@ use View\Html\Html;
 <!-- Add news form -->
 
 
-    <form action="?action=add&type=<?= $type ?>" id="addForm" class="hidden" method="post" class="add_news_form">
-        <div class="addnews_modal">
+<form action="?action=add&type=<?= $type ?>" id="addForm" class="hidden" method="post" class="add_news_form">
+    <div class="addnews_modal">
 
-            <label for="header" class="news_form_lable"> <?= $comments['header'] ?></label>
-            <input type="tel" name="header" id="header">
+        <label for="header" class="news_form_lable"> <?= $comments['header'] ?></label>
+        <input type="tel" name="header" id="header">
 
-            <label for="newscontent" class="news_form_lable"> <?= $comments['newscontent'] ?></label>
-            <textarea name="newscontent" id="newscontent" cols="30" rows="4"></textarea>
-            <input class="sendFormButton" type="submit" value="Add news">
+        <label for="newscontent" class="news_form_lable"> <?= $comments['newscontent'] ?></label>
+        <textarea name="newscontent" id="newscontent" cols="30" rows="4"></textarea>
+        <input class="sendFormButton" type="submit" value="Add news">
 
-            <a id="closeFormButton">Close</a>
+        <a id="closeFormButton">Close</a>
 
-        </div>
-    </form>
+    </div>
+</form>
 
 <div id="shadow" class="hidden"></div>
 

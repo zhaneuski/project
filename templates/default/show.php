@@ -2,6 +2,7 @@
 
 use TexLab\Html\Select;
 use View\Html\Html;
+
 /** @var array $table */
 ?>
 <!-- Intro -->
@@ -13,12 +14,12 @@ use View\Html\Html;
             <h1>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit
             </h1>
-            <div class="svg-wrapper">
-                <svg height="60" width="200" xmlns="http://www.w3.org/2000/svg">
-                    <rect class="shape" height="60" width="200"/>
-                    <div class="text"><a href="?action=loginform&type=auth" class="link_form">login</a></div>
+            <a href="?action=loginform&type=auth" class="default_button">
+                <svg class="button__svg">
+                    <rect class="button_rect"></rect>
                 </svg>
-            </div>
+                Login
+            </a>
         </div>
     </div>
 </div>

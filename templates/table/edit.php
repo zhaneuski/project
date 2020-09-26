@@ -7,17 +7,24 @@ use View\Html\Html;
  * @var array $fields
  * @var array $comments
  */
+?>
 
-$form = Html::create('Form')
-    ->setMethod('POST')
-    ->setAction("?action=edit&type=$type")
-    ->setClass('form');
+<div class="user_addForm_container user_editForm_container">
 
-foreach ($fields as $name => $value) {
-    $form->addContent(Html::create('Label')->setFor($name)->setInnerText($comments[$name])->html());
-    $form->addContent(Html::create('input')->setName($name)->setId($name)->setValue($value)->html());
-}
+    <?php
+    $form = Html::create('Form')
+        ->setMethod('POST')
+        ->setAction("?action=edit&type=$type")
+        ->setClass('form');
 
-echo $form->addContent(Html::create('Input')->setType('hidden')->setName('id')->setValue($id)->html())
-    ->addContent(Html::create('Input')->setType('submit')->setValue('OK')->html())
-    ->html();
+    foreach ($fields as $name => $value) {
+        $form->addContent(Html::create('Label')->setFor($name)->setInnerText($comments[$name])->html());
+        $form->addContent(Html::create('input')->setName($name)->setId($name)->setValue($value)->html());
+    }
+
+    echo $form->addContent(Html::create('Input')->setType('hidden')->setName('id')->setValue($id)->html())
+        ->addContent(Html::create('Input')->setType('submit')->setValue('EDIT')->html())
+        ->html();
+    ?>
+</div>
+

@@ -9,6 +9,7 @@ use View\Html\Html;
  * @var string $type Имя контроллера
  * @var array $usersList список пользователей
  * @var array $table
+ * @var int $currentPage
  */
 
 foreach ($table as &$row) {
@@ -45,11 +46,18 @@ unset($comments["id"]);
 
         <div class="pagination_container">
             <?php
-            echo Html::create("Pagination")
-                ->setClass('pagination')
-                ->setControllerType($type)
-                ->setPageCount($pageCount)
-                ->html();
+            if ($pageCount > 1) {
+                $pagination = TexLab\Html\Html::pagination();
+
+                echo $pagination
+                    ->setClass("pagination")
+                    ->setUrlPrefix("?type=$type&action=show")
+                    ->setPrevious('Previous')
+                    ->setNext('Next')
+                    ->setPageCount($pageCount)
+                    ->setCurrentPage($currentPage)
+                    ->html();
+            }
             ?>
         </div>
     </div>

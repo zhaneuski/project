@@ -29,7 +29,8 @@ class LandlordNewsController extends AbstractTableController
                 'fields' => array_diff($this->table->getColumnsNames(), ['id']),
                 'comments' => $this->table->getColumnsComments(),
                 'type' => $this->getClassName(),
-                'pageCount' => $this->table->pageCount()
+                'pageCount' => $this->table->pageCount(),
+                "currentPage" => ($data['get']['page'] ?? 1)
             ]);
     }
 }

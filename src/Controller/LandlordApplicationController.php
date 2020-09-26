@@ -27,7 +27,8 @@ class LandlordApplicationController extends ApplicationController
                     'fields' => array_diff($this->table->getColumnsNames(), ['id']),
                     'comments' => $this->table->getColumnsComments(),
                     'type' => $this->getClassName(),
-                    'pageCount' => $this->table->pageCountApplication($_SESSION['user']['id'])
+                    'pageCount' => $this->table->pageCountApplication($_SESSION['user']['id']),
+                    "currentPage" => ($data['get']['page'] ?? 1)
                 ]
             );
     }

@@ -8,7 +8,8 @@ use View\Html\Html;
  * @var array $comments Комментарии к полям таблицы
  * @var string $type Имя контроллера
  * @var array $usersList список пользователей
- *@var array $table
+ * @var array $table
+ * @var int $currentPage
  */
 
 
@@ -39,11 +40,20 @@ use View\Html\Html;
 
         <div class="pagination_container">
             <?php
-            echo Html::create("Pagination")
-                ->setClass('pagination')
-                ->setControllerType($type)
-                ->setPageCount($pageCount)
-                ->html();
+            if ($pageCount > 1) {
+                $pagination = TexLab\Html\Html::pagination();
+
+                echo $pagination
+                    ->setClass("pagination")
+                    ->setUrlPrefix("?type=$type&action=show")
+                    ->setPrevious('Previous')
+//                    ->setFirst('First')
+//                    ->setLast('Last')
+                    ->setNext('Next')
+                    ->setPageCount($pageCount)
+                    ->setCurrentPage($currentPage)
+                    ->html();
+            }
             ?>
         </div>
     </div>

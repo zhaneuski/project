@@ -32,6 +32,7 @@ class NewsController extends AbstractTableController
                     ->setPageSize(Config::PAGE_SIZE)
                     ->setOrderBy('`id` DESC')
                     ->getPage($data['get']['page'] ?? 1),
+                "currentPage"=> ($data['get']['page'] ?? 1),
                 'fields' => array_diff($this->table->getColumnsNames(), ['id']),
                 'comments' => $this->table->getColumnsComments(),
                 'type' => $this->getClassName(),
