@@ -12,16 +12,12 @@ use View\Html\Html;
 
 <div class="news">
     <div class="container" id="news_container">
-
         <div class="container_header">
-
             <div class="header_button">
                 <h2 class="header3"> Groups</h2>
             </div>
-
         </div>
         <div class="table_container">
-
             <?php
             echo Html::create('TableEdited')
                 ->setControllerType($type)
@@ -31,12 +27,10 @@ use View\Html\Html;
                 ->html();
             ?>
         </div>
-
         <div class="pagination_container">
             <?php
             if ($pageCount > 1) {
                 $pagination = TexLab\Html\Html::pagination();
-
                 echo $pagination
                     ->setClass("pagination")
                     ->setUrlPrefix("?type=$type&action=show")
@@ -56,7 +50,6 @@ use View\Html\Html;
                         ->setMethod('POST')
                         ->setAction("?action=add&type=$type")
                         ->setClass('form');
-
                     foreach ($fields as $field) {
                         if ($field == "adress") {
                             $form->addContent(Html::create('Label')->setFor($field)->setInnerText($comments[$field])->html());

@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Controller;
-
 
 use Core\Config;
 use Model\AuthModel;
@@ -48,6 +46,7 @@ class AuthController extends AbstractController
                 $httpData['post']['password']
             );
         if (empty($kod)) {
+            $_SESSION['errors'][] = 'Incorrect apartment number or phone number !';
             $this->redirect("?action=loginform&type=" . $this->getClassName());
         } else {
             $_SESSION['user'] = $kod;

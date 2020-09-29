@@ -35,21 +35,3 @@ class LandlordNewsController extends AbstractTableController
     }
 }
 
-//        $this->view->setFolder('news');
-
-
-
-//    public function __construct(View $view)
-//    {
-//        parent::__construct($view);
-//        $this->table = new NewsModel(
-//            $this->tableName,
-//            DB::Link([
-//                'host' => Config::MYSQL_HOST,
-//                'username' => Config::MYSQL_USER_NAME,
-//                'password' => Config::MYSQL_PASSWORD,
-//                'dbname' => Config::MYSQL_DATABASE
-//            ])
-//        );
-//        $this->view->setFolder('landlordnews');
-//    }

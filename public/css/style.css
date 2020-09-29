@@ -93,7 +93,6 @@
 #users_id {
     width: 80%;
     text-transform: uppercase;
-
 }
 
 /* Edit */
@@ -140,7 +139,7 @@
     height: 27rem;
 }
 
-/* */
+/* image */
 
 .img {
     width: 100%;
@@ -335,7 +334,7 @@ h1, h2, h3, h4, h5, h6, p {
     margin-top: 1rem;
 }
 
-/*footer*/
+/* footer */
 
 .footer {
     background-color: rgb(22, 22, 22);
@@ -401,7 +400,7 @@ h1, h2, h3, h4, h5, h6, p {
 .container_auth {
     box-sizing: border-box;
     width: 20rem;
-    height: 24rem;
+    height: 25rem;
     background-color: rgba(0, 0, 0, 0.6);
     display: flex;
     flex-direction: column;
@@ -439,8 +438,16 @@ h1, h2, h3, h4, h5, h6, p {
     background: rgba(255, 255, 255, 0.29);
 }
 
+.reg_error {
+    color: #ea3d3d;
+    font-size: 15px;
+    font-family: "Tahoma";
+    text-align: center;
+    font-size: 0.8rem;
+}
+
 .btn_auth {
-    margin: 1.5rem 0;
+    margin: 1rem 0 1.5rem 0;
     width: 7rem;
     height: 2.3rem;
     font-size: 1rem;

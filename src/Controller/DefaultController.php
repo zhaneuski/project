@@ -48,21 +48,4 @@ class DefaultController extends AbstractTableController
             ]
         );
     }
-
-
-
-
-
-
-
-
-
-
-//    public function actionDefault()
-//    {
-//        $this
-//            ->view
-//            ->setFolder('default')
-//            ->setTemplate('default');
-//    }
 }

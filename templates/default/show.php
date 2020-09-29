@@ -10,7 +10,6 @@ use View\Html\Html;
 <div class="intro">
     <div class="container">
         <div class="intro__inner">
-            <!-- effects -->
             <h1>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit
             </h1>
@@ -42,25 +41,20 @@ use View\Html\Html;
     </div>
 </div>
 
-
 <!-- News -->
 
 <div class="news">
     <div class="container" id="news_container">
-
         <div class="container_header">
             <h2 class="header3"> Actual news</h2>
         </div>
-
         <?php
         echo Html::create('DefaultDiv')
             ->data($table)
             ->html();
         ?>
-
     </div>
 </div>
-
 
 <!-- footer -->
 
@@ -70,21 +64,16 @@ use View\Html\Html;
             <div class="footer_content">
                 <div class="footer_logo"><a href="?action=show&type=default">Z.V</a></div>
             </div>
-
             <div class="footer_content">
                 <div class="footer_img">
                     <i class="fa fa-envelope" aria-hidden="true"></i>
                 </div>
-
                 <h4 class="footer_header">mail</h4>
-
                 <div class="footer_item">
                     klibariy@mail.ru
                 </div>
             </div>
-
             <div class="footer_content">
-
                 <div class="footer_img">
                     <i class="fa fa-phone" aria-hidden="true"></i>
                 </div>
@@ -93,7 +82,6 @@ use View\Html\Html;
                     +123456789
                 </div>
             </div>
-
             <div class="footer_content">
                 <div class="footer_img">
                     <i class="fa fa-bus" aria-hidden="true"></i>
@@ -102,7 +90,6 @@ use View\Html\Html;
                 <div class="footer_item">
                     Vitebsk, Republic of Belarus
                 </div>
-
             </div>
         </div>
     </div>

@@ -38,6 +38,5 @@ class NewsController extends AbstractTableController
                 'type' => $this->getClassName(),
                 'pageCount' => $this->table->pageCount()
             ]);
-//        $this->view->setFolder('news');
     }
 }

@@ -33,8 +33,6 @@ class ApplicationModel extends DbEntity
 
     public function pageCountApplication(int $user_id)
     {
-//        print_r($this->runSQL("SELECT COUNT(*) as count FROM application, users WHERE `users`.`id` = `application`.`users_id` AND `application` . `users_id` = $user_id"));
         return ceil($this->runSQL("SELECT COUNT(*) as count FROM application, users WHERE `users`.`id` = `application`.`users_id` AND `application` . `users_id` = $user_id")[0]['count'] / $this->pageSize);
     }
-
 }

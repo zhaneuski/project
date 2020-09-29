@@ -19,9 +19,6 @@
                         <li>
                             <a class="header__link" href="?action=show&type=chairmanapplication">Applications</a>
                         </li>
-<!--                        <li>-->
-<!--                            <a class="header__link" href="?action=show&type=group">Group</a>-->
-<!--                        </li>-->
                         <li>
                             <a class="header__link" href="?action=show&type=users">Users</a>
                         </li>
