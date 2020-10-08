@@ -37,9 +37,11 @@ class UsersController extends AbstractTableController
                     ->table
                     ->reset()
                     ->setPageSize(Config::PAGE_SIZE)
-                    ->getUsersPage($data['get']['page'] ?? 1)
+                    ->getUsersPage($data['get']['page'] ?? 1),
+                "currentPage" => ($data['get']['page'] ?? 1)
             ]);
     }
+
     public function actionShowEdit(array $data)
     {
         parent::actionShowEdit($data);
@@ -50,11 +52,13 @@ class UsersController extends AbstractTableController
                 'groupNames' => $this->table->getGroupNames()
             ]);;
     }
+
     public function actionAdd(array $data)
     {
-        $data['post']['password'] = md5($data['post']['password'] . Config::SALT);
+//        $data['post']['password'] = $data['post']['password'] . Config::SALT);
         parent::actionAdd($data);
     }
+
     public function actionEdit(array $data)
     {
         $data['post']['password'] = md5($data['post']['password'] . Config::SALT);

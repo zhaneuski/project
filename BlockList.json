@@ -1,15 +1,26 @@
 {
     "admin": [],
-    "chairman": [],
+    "chairman": [
+        "landlordapplication",
+        "group",
+        "application",
+        "landlordnews"
+    ],
     "landlord": [
         "group",
-        "users"
+        "users",
+        "application",
+        "news",
+        "chairmanapplication"
     ],
 
     "default": [
         "group",
         "users",
-        "Phonebook",
-        "guestbook"
+        "application",
+        "chairmanapplication",
+        "landlordapplication",
+        "news",
+        "landlordnews"
     ]
 }

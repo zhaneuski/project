@@ -51,7 +51,8 @@ class ApplicationController extends AbstractTableController
                     ->table
                     ->reset()
                     ->setPageSize(Config::PAGE_SIZE)
-                    ->getApplicationPage($data['get']['page'] ?? 1)
+                    ->getApplicationPage($data['get']['page'] ?? 1),
+                "currentPage"=> ($data['get']['page'] ?? 1)
             ]
         );
     }
@@ -96,7 +97,10 @@ class ApplicationController extends AbstractTableController
         $id = $data['get']['id'];
         $image = $this->table->get(['id' => $id])[0]['image'];
         $ext = pathinfo($image, PATHINFO_EXTENSION);
-        unlink("images/application/$id.$ext");
+
+        if (file_exists ("images/application/$id.$ext")) {
+            unlink("images/application/$id.$ext");
+        }
         parent::actionDel($data);
     }
 }

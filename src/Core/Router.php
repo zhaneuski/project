@@ -15,7 +15,7 @@ class Router
     {
         $this->view = new View();
         $this->controllerName = "Controller\\" . (ucfirst(strtolower($_GET['type'] ?? 'Default'))) . "Controller";
-        $this->actionName = "action" . ($_GET['action'] ?? 'Default');
+        $this->actionName = "action" . ($_GET['action'] ?? 'show');
     }
 
     public function run()

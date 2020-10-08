@@ -17,5 +17,4 @@ class AuthModel extends DbEntity
             ->addWhere("BINARY `users`.`password`= '$password'")
             ->get()[0];
     }
-
 }

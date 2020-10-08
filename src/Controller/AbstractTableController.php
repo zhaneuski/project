@@ -47,7 +47,7 @@ abstract class AbstractTableController extends AbstractController implements CRU
                 'fields' => array_diff($this->table->getColumnsNames(), ['id']),
                 'comments' => $this->table->getColumnsComments(),
                 'type' => $this->getClassName(),
-                'pageCount' => $this->table->pageCount()
+                'pageCount' => $this->table->pageCount(),
             ]);
     }
 
