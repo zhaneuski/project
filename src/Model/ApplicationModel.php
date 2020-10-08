@@ -15,8 +15,6 @@ class ApplicationModel extends DbEntity
             ->setFrom('`users`,`application`')
             ->setWhere('`users`.`id` = `application`.`users_id`')
             ->setOrderBy('`application`.`id` DESC');
-//            ->getSQL();
-//            ->setLimit(2)
         return $this->getPage($page);
     }
 

@@ -11,5 +11,4 @@ class Config
     const PAGE_SIZE = 8;
     const PAGE_DEFAULT_SIZE = 4;
     const BLOCK_LIST = '../BlockList.json';
-    const SALT = '12345678910';
 }
